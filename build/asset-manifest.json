@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://hanseroland.github.io/myportfolio/static/css/main.2ab6f59c.css",
-    "main.js": "https://hanseroland.github.io/myportfolio/static/js/main.e8aab2c0.js",
+    "main.js": "https://hanseroland.github.io/myportfolio/static/js/main.1b8bdcaa.js",
     "static/js/787.128fc6e9.chunk.js": "https://hanseroland.github.io/myportfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/IMG_1731.PNG": "https://hanseroland.github.io/myportfolio/static/media/IMG_1731.c42845c95e336abb85f7.PNG",
     "static/media/pizza.png": "https://hanseroland.github.io/myportfolio/static/media/pizza.095c24468beb3e65c6af.png",
@@ -34,11 +34,11 @@
     "static/media/SpaceMission-rgyw9.otf": "https://hanseroland.github.io/myportfolio/static/media/SpaceMission-rgyw9.9f7052cf58f04a6694f8.otf",
     "index.html": "https://hanseroland.github.io/myportfolio/index.html",
     "main.2ab6f59c.css.map": "https://hanseroland.github.io/myportfolio/static/css/main.2ab6f59c.css.map",
-    "main.e8aab2c0.js.map": "https://hanseroland.github.io/myportfolio/static/js/main.e8aab2c0.js.map",
+    "main.1b8bdcaa.js.map": "https://hanseroland.github.io/myportfolio/static/js/main.1b8bdcaa.js.map",
     "787.128fc6e9.chunk.js.map": "https://hanseroland.github.io/myportfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ab6f59c.css",
-    "static/js/main.e8aab2c0.js"
+    "static/js/main.1b8bdcaa.js"
   ]
 }
