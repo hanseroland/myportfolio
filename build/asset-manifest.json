@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/myportfolio/static/css/main.ad16a10a.css",
-    "main.js": "/myportfolio/static/js/main.28016b40.js",
+    "main.js": "/myportfolio/static/js/main.bea2fd9a.js",
     "static/js/787.128fc6e9.chunk.js": "/myportfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/IMG_1731.PNG": "/myportfolio/static/media/IMG_1731.c42845c95e336abb85f7.PNG",
     "static/media/pizza.png": "/myportfolio/static/media/pizza.095c24468beb3e65c6af.png",
@@ -9,6 +9,7 @@
     "static/media/ccarree.png": "/myportfolio/static/media/ccarree.f925f18b88dcd4181888.png",
     "static/media/semisenegal.png": "/myportfolio/static/media/semisenegal.bbcee143feed871590c5.png",
     "static/media/cliniquepasteur.png": "/myportfolio/static/media/cliniquepasteur.efeb21b25973ccb31191.png",
+    "static/media/souris.png": "/myportfolio/static/media/souris.e5b933ddee0f465d8ba5.png",
     "static/media/ProgressPersonalUse-EaJdz.ttf": "/myportfolio/static/media/ProgressPersonalUse-EaJdz.93e9d2c9e1e0c7b13803.ttf",
     "static/media/bravosenegal.png": "/myportfolio/static/media/bravosenegal.30de3d7b6dcf37d37285.png",
     "static/media/pharmApp2.png": "/myportfolio/static/media/pharmApp2.99b4593baaa24332ff5a.png",
@@ -19,9 +20,11 @@
     "static/media/SpaceRangerAcademy-1WnM.otf": "/myportfolio/static/media/SpaceRangerAcademy-1WnM.73b6377558c9e4df9194.otf",
     "static/media/PowerLord3D-lyO5.otf": "/myportfolio/static/media/PowerLord3D-lyO5.8c2fd106091efff7e2bc.otf",
     "static/media/cv-nguema-ntougou.pdf": "/myportfolio/static/media/cv-nguema-ntougou.2af0c701475ae14096dc.pdf",
+    "static/media/tasse1.png": "/myportfolio/static/media/tasse1.978520bdf169bbec1064.png",
     "static/media/home.png": "/myportfolio/static/media/home.b17cb6e09573c1c73208.png",
     "static/media/Stacker-jE03l.ttf": "/myportfolio/static/media/Stacker-jE03l.f41bace54b6afb764279.ttf",
     "static/media/PowerLordGradient-YZWa.otf": "/myportfolio/static/media/PowerLordGradient-YZWa.78c1c7add68dca0e1827.otf",
+    "static/media/white-mail-icon-22.jpg": "/myportfolio/static/media/white-mail-icon-22.a8e3e95ca01c977a3133.jpg",
     "static/media/BebasNeue-Regular.ttf": "/myportfolio/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
     "static/media/PowerLordHalftone-MPmw.otf": "/myportfolio/static/media/PowerLordHalftone-MPmw.e2ae078c29be775035c4.otf",
     "static/media/PowerLord-9D7y.otf": "/myportfolio/static/media/PowerLord-9D7y.68a136218e7ce8d83dde.otf",
@@ -31,14 +34,17 @@
     "static/media/Hacked-KerX.ttf": "/myportfolio/static/media/Hacked-KerX.d981e1d471a16b240218.ttf",
     "static/media/StarJediRounded-jW3R.ttf": "/myportfolio/static/media/StarJediRounded-jW3R.6e9aa1350c840eb8c5ae.ttf",
     "static/media/StarJedi-DGRW.ttf": "/myportfolio/static/media/StarJedi-DGRW.4c37e50c5883f338f4ec.ttf",
+    "static/media/smoke-3.png": "/myportfolio/static/media/smoke-3.f0e1504aa99281beeca8.png",
+    "static/media/LinkedIn-Icon-Squircle-Dark.png": "/myportfolio/static/media/LinkedIn-Icon-Squircle-Dark.54188df36ba7b10c53a7.png",
+    "static/media/github_logo.png": "/myportfolio/static/media/github_logo.f61d0b7048d0215fc5ba.png",
     "static/media/SpaceMission-rgyw9.otf": "/myportfolio/static/media/SpaceMission-rgyw9.9f7052cf58f04a6694f8.otf",
     "index.html": "/myportfolio/index.html",
     "main.ad16a10a.css.map": "/myportfolio/static/css/main.ad16a10a.css.map",
-    "main.28016b40.js.map": "/myportfolio/static/js/main.28016b40.js.map",
+    "main.bea2fd9a.js.map": "/myportfolio/static/js/main.bea2fd9a.js.map",
     "787.128fc6e9.chunk.js.map": "/myportfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ad16a10a.css",
-    "static/js/main.28016b40.js"
+    "static/js/main.bea2fd9a.js"
   ]
 }

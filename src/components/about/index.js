@@ -332,17 +332,17 @@ function About() {
                     
                   </Grid>
                   <Grid item   lg={12} xs={12} ></Grid>
-                     <Typography fontSize={20} variant="body1" align='justify' component="p" color="white">
+                     <Typography fontSize={15} variant="body1" align='justify' component="p" color="white">
                           Je suis un developpeur React Fullstak. Je vis à Dakar au Sénégal.
                           J'ai une passion pour le developpement web et mobile multi plateforme.
                      </Typography>
-                     <Typography fontSize={20} variant="body1"  align='justify' component="p" color="white">
+                     <Typography fontSize={15} variant="body1"  align='justify' component="p" color="white">
                             Etant quelqu'un d'organisé, J'aime commencer par l'étude spécifiques des besoins à
                             l'étude architecturale d'un projet avant de le mettre en oeuvre. Résolveur de problèmes,
                             je suis fan de méditation et de reflexion. Je m'interesse beaucoup à comprendre la psychologie 
                             humaine à travers la lecture et mes propres expériences personnelles mais aussi de mon entourage.
                       </Typography>
-                      <Typography fontSize={20}  variant="body1"  align='justify' component="p" color="white">
+                      <Typography fontSize={15}  variant="body1"  align='justify' component="p" color="white">
                             Je suis motivé et intéressé à travailler sur tous projets innovants avec des personnes respectueuses et positives
                             afin de m'améliorer.
                       </Typography>
