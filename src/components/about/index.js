@@ -3,7 +3,10 @@ import styled,{ keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import Container from '@mui/material/Container'
 import { Grid, Typography } from '@mui/material';
-import '../index.css'
+import '../index.css';
+import ImgCoffee from '../../images/tasse1.png'
+import ImgMouse from '../../images/souris.png';
+import ImgSmoke from '../../images/smoke-3.png';
 
 const Content = styled.div`
   display:flex;
@@ -554,7 +557,7 @@ function About() {
                           <Cupwrap>
                             <Cup>
                                   <Image
-                                    src='/assets/tasse1.png'
+                                    src={ImgCoffee}
                                     viewport={{once:false}}
                                     initial={{opacity:0,x:-10}}
                                     whileInView={{opacity:1,x:0}}
@@ -563,7 +566,7 @@ function About() {
                             </Cup>
                             <Smokewrap>
                                 <Smoke
-                                  src='/assets/smoke-3.png'
+                                  src={ImgSmoke}
                                   viewport={{once:false}}
                                   initial={{opacity:0,y:50}}
                                   whileInView={{opacity:1,y:0}}
@@ -573,7 +576,7 @@ function About() {
                           </Cupwrap>
                         
                             <Image
-                                  src='/assets/souris.png'
+                                  src={ImgMouse}
                                   viewport={{once:false}}
                                   initial={{opacity:0,y:50}}
                                   whileInView={{opacity:1,y:0}}

@@ -2,6 +2,9 @@ import React from 'react'
 import { Container, Grid } from '@mui/material';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import ImgMail from '../../images/white-mail-icon-22.jpg'
+import ImgIn from '../../images/LinkedIn-Icon-Squircle-Dark.png'
+import ImgGit from '../../images/github_logo.png';
 
 
 const Content = styled.div`
@@ -141,7 +144,7 @@ function Contact() {
                         >
                             <a target="_blank" rel="noopener noreferrer" href="https://github.com/hanseroland/" >
                               <ContentBox>
-                              <img src="/assets/github_logo.png" alt="HANSE ROLAND PARFAIT - PORTFOLIO"/> 
+                              <img src={ImgGit} alt="HANSE ROLAND PARFAIT - PORTFOLIO"/> 
                                  <p> 
                                     
                                  </p>
@@ -158,7 +161,7 @@ function Contact() {
                         >
                             <a target="_blank" rel="noopener noreferrer" href="https://sn.linkedin.com/in/hanse-roland-parfait-nguema-ntougou-16a907220?trk=public_profile_browsemap" >
                               <ContentBox>
-                                <img src="/assets/LinkedIn-Icon-Squircle-Dark.png" alt="HANSE ROLAND PARFAIT - PORTFOLIO"/>
+                                <img src={ImgIn} alt="HANSE ROLAND PARFAIT - PORTFOLIO"/>
                                  <p> 
                                   
                                  </p>
@@ -175,7 +178,7 @@ function Contact() {
                         > 
                             <a href="mailto:rolandntougou@gmail.com" >
                               <ContentBox>
-                              <img src="/assets/white-mail-icon-22.jpg" alt="HANSE ROLAND PARFAIT - PORTFOLIO"/>
+                              <img src={ImgMail} alt="HANSE ROLAND PARFAIT - PORTFOLIO"/>
                                  <p> 
                                      
                                  </p>
