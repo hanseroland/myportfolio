@@ -1,5 +1,4 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom'
 import About from './components/about';
 import Banner from './components/Banner';
 import Contact from './components/contact';
@@ -16,13 +15,13 @@ import './App.css'
 
 function App() {
   return (
-    <Router  basename={process.env.PUBLIC_URL}>
+    <>
        <Navbar/>
        <Banner/>
        <About/>
        <Projets/>
        <Contact/>
-    </Router>
+    </>
   );
 }
 
