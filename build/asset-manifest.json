@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://hanseroland.github.io/myportfolio/static/css/main.2ab6f59c.css",
-    "main.js": "https://hanseroland.github.io/myportfolio/static/js/main.1b8bdcaa.js",
+    "main.js": "https://hanseroland.github.io/myportfolio/static/js/main.804a38e8.js",
     "static/js/787.128fc6e9.chunk.js": "https://hanseroland.github.io/myportfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/IMG_1731.PNG": "https://hanseroland.github.io/myportfolio/static/media/IMG_1731.c42845c95e336abb85f7.PNG",
     "static/media/pizza.png": "https://hanseroland.github.io/myportfolio/static/media/pizza.095c24468beb3e65c6af.png",
@@ -18,7 +18,7 @@
     "static/media/PressStart2P-Regular.ttf": "https://hanseroland.github.io/myportfolio/static/media/PressStart2P-Regular.21503c6a5385ab41dde9.ttf",
     "static/media/SpaceRangerAcademy-1WnM.otf": "https://hanseroland.github.io/myportfolio/static/media/SpaceRangerAcademy-1WnM.73b6377558c9e4df9194.otf",
     "static/media/PowerLord3D-lyO5.otf": "https://hanseroland.github.io/myportfolio/static/media/PowerLord3D-lyO5.8c2fd106091efff7e2bc.otf",
-    "static/media/cv-nguema-ntougou.pdf": "https://hanseroland.github.io/myportfolio/static/media/cv-nguema-ntougou.3b5b64a2d240a8c06110.pdf",
+    "static/media/cv-nguema-ntougou.pdf": "https://hanseroland.github.io/myportfolio/static/media/cv-nguema-ntougou.2af0c701475ae14096dc.pdf",
     "static/media/home.png": "https://hanseroland.github.io/myportfolio/static/media/home.b17cb6e09573c1c73208.png",
     "static/media/Stacker-jE03l.ttf": "https://hanseroland.github.io/myportfolio/static/media/Stacker-jE03l.f41bace54b6afb764279.ttf",
     "static/media/PowerLordGradient-YZWa.otf": "https://hanseroland.github.io/myportfolio/static/media/PowerLordGradient-YZWa.78c1c7add68dca0e1827.otf",
@@ -34,11 +34,11 @@
     "static/media/SpaceMission-rgyw9.otf": "https://hanseroland.github.io/myportfolio/static/media/SpaceMission-rgyw9.9f7052cf58f04a6694f8.otf",
     "index.html": "https://hanseroland.github.io/myportfolio/index.html",
     "main.2ab6f59c.css.map": "https://hanseroland.github.io/myportfolio/static/css/main.2ab6f59c.css.map",
-    "main.1b8bdcaa.js.map": "https://hanseroland.github.io/myportfolio/static/js/main.1b8bdcaa.js.map",
+    "main.804a38e8.js.map": "https://hanseroland.github.io/myportfolio/static/js/main.804a38e8.js.map",
     "787.128fc6e9.chunk.js.map": "https://hanseroland.github.io/myportfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ab6f59c.css",
-    "static/js/main.1b8bdcaa.js"
+    "static/js/main.804a38e8.js"
   ]
 }
