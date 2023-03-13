@@ -6,6 +6,7 @@ export const MenuItems = [
     title: 'Accueil',
     path: 'banner',
     icon: '',
+    color:"#FF008C",
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />
   },
@@ -13,6 +14,7 @@ export const MenuItems = [
     title: 'À propos',
     path: 'about',
     icon: '',
+    color:"#D309E1",
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
   },
@@ -20,14 +22,16 @@ export const MenuItems = [
     title: 'Projets',
     path: 'projets',
     icon: '',
+    color:"#9C1AFF",
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
        
   },
-  {
+  {  
         title: 'Contact',
         path: 'contact',
         icon: '',
+        color:"#7700FF",
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
         

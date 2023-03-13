@@ -41,7 +41,7 @@ const Box = styled.div`
     position:absolute;
     width:105%;
     height:105%;
-    background-image:conic-gradient(transparent,transparent,transparent, rgb(0, 195, 255));
+    background-image:conic-gradient(transparent,transparent,transparent, #7700FF);
     animation: ${animate} 4s linear infinite;
     animation-delay:-2s;
     
@@ -93,7 +93,7 @@ const Span = styled(motion.span)`
   0 0 0 2px rgba(0,0,0,0.75),
   10px 20px 25px rgba(0,0,0,0.4);
   overflow:hidden;
-  z-index:2;
+  z-index:1;
   
 
   :before {
@@ -108,18 +108,14 @@ const Span = styled(motion.span)`
     box-shadow:0 0 7px rgba(255, 255, 255, 0.89),
     0 0 1px #fff,
     0 0 2px #fff,
-    0 0 4px rgb(0, 195, 255),
-    0 0 8px rgb(0, 195, 255),
-    0 0 9px rgb(0, 195, 255),
-    0 0 10px rgb(0, 195, 255),
-    0 0 15px rgb(0, 195, 255);
+    0 0 4px #4400FF,
+    0 0 8px #4400FF,
+    0 0 9px #4400FF,
+    0 0 10px #4400FF,
+    0 0 15px #4400FF;
     border-left:1px solid #0004;
     border-bottom:1px solid #0004;
     border-top:1px solid #0004;
-
-     
-
-
   }
   :hover {
    
@@ -128,21 +124,21 @@ const Span = styled(motion.span)`
     box-shadow:0 0 7px rgba(255, 255, 255, 0.89),
     0 0 1px #fff,
     0 0 2px #fff,
-    0 0 4px rgb(0, 195, 255),
-    0 0 8px rgb(0, 195, 255),
-    0 0 9px rgb(0, 195, 255),
-    0 0 10px rgb(0, 195, 255),
-    0 0 15px rgb(0, 195, 255);
+    0 0 4px #4400FF,
+    0 0 8px #4400FF,
+    0 0 9px #4400FF,
+    0 0 10px #4400FF,
+    0 0 15px #4400FF;
     border-right:1px solid #0004;
     border-bottom:1px solid #0004;
     border-top:1px solid #0004;
 
-    :before{
-     
-      box-shadow:-10px -10px 10px rgba(255,255,255,0.25),
-      10px 5px 10px rgba(0,0,0,0.15);
-     
+    :befor{
+
     }
+   
+
+
   }
 
   i{
@@ -205,7 +201,7 @@ const ResponsiveBox = styled.div`
     position:absolute;
     width:105%;
     height:105%;
-    background-image:conic-gradient(transparent,transparent,transparent, rgb(0, 195, 255));
+    background-image:conic-gradient(transparent,transparent,transparent, #7700FF);
     animation: ${animate} 4s linear infinite;
     animation-delay:-2s;
   }
@@ -264,11 +260,11 @@ const ResponsiveSpan = styled(motion.span)`
     box-shadow:0 0 7px rgba(255, 255, 255, 0.89),
     0 0 1px #fff,
     0 0 2px #fff,
-    0 0 4px rgb(0, 195, 255),
-    0 0 8px rgb(0, 195, 255),
-    0 0 9px rgb(0, 195, 255),
-    0 0 10px rgb(0, 195, 255),
-    0 0 15px rgb(0, 195, 255);
+    0 0 4px #4400FF,
+    0 0 8px #4400FF,
+    0 0 9px #4400FF,
+    0 0 10px #4400FF,
+    0 0 15px #4400FF;
     border-left:1px solid #0004;
     border-bottom:1px solid #0004;
     border-top:1px solid #0004;
@@ -282,11 +278,11 @@ const ResponsiveSpan = styled(motion.span)`
     box-shadow:0 0 7px rgba(255, 255, 255, 0.89),
     0 0 1px #fff,
     0 0 2px #fff,
-    0 0 4px rgb(0, 195, 255),
-    0 0 8px rgb(0, 195, 255),
-    0 0 9px rgb(0, 195, 255),
-    0 0 10px rgb(0, 195, 255),
-    0 0 15px rgb(0, 195, 255);
+    0 0 4px #4400FF,
+    0 0 8px #4400FF,
+    0 0 9px #4400FF,
+    0 0 10px #4400FF,
+    0 0 15px #4400FF;
     border-right:1px solid #0004;
     border-bottom:1px solid #0004;
     border-top:1px solid #0004;
@@ -367,14 +363,21 @@ const ResponsiveSpan = styled(motion.span)`
  
 `;
 
-function Banner() {
+function Banner({primary}) {
+
+ 
   return (
     <Content id="banner" >
+      
         <Container maxWidth="lg">
+            
+        
+              
           <Box>
             <b></b>
           <Grid container>
               <Grid style={{display:"flex",justifyContent:"space-between"}}  container item lg={12}>
+                   
                    <Grid item lg={6} xs={6} >
                     <NavScroll  
                     to="banner" 
@@ -384,6 +387,7 @@ function Banner() {
                     
                     >
                           <Span
+                            
                             viewport={{once:false}}
                             initial={{opacity:0,y:-50}}
                             whileInView={{opacity:1,y:0}}
@@ -394,7 +398,7 @@ function Banner() {
                     </NavScroll>
                     <a 
                      style={{textDecoration:'none'}}
-                    href={require('../../images/cv-nguema-ntougou.pdf')}
+                    href='https://drive.google.com/file/d/1ozszGso4oG77MM1MyqkU6TLvVv7poneN/view?usp=share_link'
                     rel="noreferrer"
                     target='_blank'
                     >
@@ -406,7 +410,6 @@ function Banner() {
                      > <i>CV</i> 
                      </Span>
                     </a>
-                    
                   </Grid>
                   <Grid style={{display:'flex',justifyContent:"flex-end"}} item lg={6} xs={6}>
                       <NavScroll 
@@ -860,11 +863,11 @@ function Banner() {
           <Grid container>
               <Grid container item lg={12} xs={12} >
                   <Grid container spacing={1}  item lg={12} xs={12}>
-                     <Grid item xs={3} md={3}  >
+                     <Grid item xs={12} md={3}  >
                      
                           <a 
                             style={{textDecoration:'none'}}
-                            href={require('../../images/cv-nguema-ntougou.pdf')}
+                            href='https://drive.google.com/file/d/1ozszGso4oG77MM1MyqkU6TLvVv7poneN/view?usp=share_link'
                             rel="noreferrer"
                             target='_blank'
                            >
@@ -878,70 +881,7 @@ function Banner() {
                               </Span>
                            </a>
                      </Grid>
-                      <Grid item xs={3}  md={3} >
-                      <NavScroll 
-                       to="about" 
-                       smooth={true}
-                       duration={500}
-                       spy={true}
                       
-                       offset={50}
-                       isDynamic={true}
-                       >
-                        <Span
-                          viewport={{once:false}}
-                          initial={{opacity:0,y:-50}}
-                          whileInView={{opacity:1,y:0}}
-                          transition={{type:"easeIn", duration:0.9,delay:0.15 }}
-                        > <i>À propos</i> 
-                        </Span>
-
-                       </NavScroll>
-                       
-                      </Grid>
-                      <Grid item xs={3}  md={3}>
-                      <NavScroll 
-                       to="projets" 
-                       smooth={true}
-                       duration={500}
-                       spy={true}
-                      
-                       offset={50}
-                       isDynamic={true}
-                       >
-
-                        <Span
-                        viewport={{once:false}}
-                        initial={{opacity:0,y:-50}}
-                        whileInView={{opacity:1,y:0}}
-                        transition={{type:"easeIn", duration:0.9,delay:0.15 }}
-                      > 
-                        <i>Mes projets</i> 
-                        </Span>
-                       </NavScroll>
-                     
-                      </Grid>
-                         <Grid item xs={3}  md={3}>
-                         <NavScroll 
-                            to="contact" 
-                            smooth={true}
-                            duration={500}
-                            spy={true}
-                            
-                            offset={50}
-                            isDynamic={true}
-                         >
-                          <Span
-                            viewport={{once:false}}
-                            initial={{opacity:0,y:-50}}
-                            whileInView={{opacity:1,y:0}}
-                            transition={{type:"easeIn", duration:0.9,delay:0.15 }}
-                          > 
-                            <i>Contacts</i>
-                          </Span>
-                       </NavScroll>
-                         
-                      </Grid>
                   </Grid>
                  
               </Grid>

@@ -7,6 +7,16 @@ import '../index.css';
 import ImgCoffee from '../../images/tasse1.png'
 import ImgMouse from '../../images/souris.png';
 import ImgSmoke from '../../images/smoke-3.png';
+import TextSpan from '../TextSpan';
+
+const animate = keyframes`
+0% {
+ transform:rotate(0deg);
+}
+100% {
+ transform:rotate(360deg);
+}
+`
 
 const Content = styled.div`
   display:flex;
@@ -27,6 +37,8 @@ const Box = styled.div`
   background:#0ccff;
   overflow:hidden;
 
+  
+
 
   b{
     position:absolute;
@@ -37,7 +49,6 @@ const Box = styled.div`
   }
 
 `;
-
 
 const Span = styled(motion.span)`
   position:relative;
@@ -68,11 +79,11 @@ const Span = styled(motion.span)`
     box-shadow:0 0 7px rgba(255, 255, 255, 0.89),
       0 0 1px #fff,
       0 0 2px #fff,
-      0 0 4px rgb(0, 195, 255),
-      0 0 8px rgb(0, 195, 255),
-      0 0 9px rgb(0, 195, 255),
-      0 0 10px rgb(0, 195, 255),
-      0 0 15px rgb(0, 195, 255);
+      0 0 4px  #4400FF,
+      0 0 8px  #4400FF,
+      0 0 9px  #4400FF,
+      0 0 10px  #4400FF,
+      0 0 15px  #4400FF;
     border-left:1px solid #0004;
     border-bottom:1px solid #0004;
     border-top:1px solid #0004;
@@ -86,11 +97,11 @@ const Span = styled(motion.span)`
     box-shadow:0 0 7px rgba(255, 255, 255, 0.89),
       0 0 1px #fff,
       0 0 2px #fff,
-      0 0 4px rgb(0, 195, 255),
-      0 0 8px rgb(0, 195, 255),
-      0 0 9px rgb(0, 195, 255),
-      0 0 10px rgb(0, 195, 255),
-      0 0 15px rgb(0, 195, 255);
+      0 0 4px  #4400FF,
+      0 0 8px  #4400FF,
+      0 0 9px  #4400FF,
+      0 0 10px  #4400FF,
+      0 0 15px  #4400FF;
     border-right:1px solid #0004;
     border-bottom:1px solid #0004;
     border-top:1px solid #0004;
@@ -137,6 +148,18 @@ const Span = styled(motion.span)`
     }
 
   }
+
+  @media screen and (max-width: 1132px){
+    width:60px;
+    height:60px;
+    padding:8px 6px;
+    font-weight:bold;
+    margin:6px 2px;
+
+    i{
+      font-size:8px;
+    }
+  }
 `;
 
 const Cupwrap = styled.div`
@@ -166,7 +189,6 @@ const Smokewrap = styled.div`
   }
 `;
 
-
  const Image = styled(motion.img)`
  
   width: 200px;
@@ -175,11 +197,7 @@ const Smokewrap = styled.div`
   max-height: 450px;
  
 
-  @media screen and (max-width: 768px){
-       width: 200px;
-       height: 200px;
-      
-    }
+ 
 
     @media screen and (max-width: 414px){
       width: 150px;
@@ -187,9 +205,19 @@ const Smokewrap = styled.div`
      
    }
 
+   @media screen and (max-width: 900px){
+    width: 150px;
+    height: 170px;
+  }
+
+  @media screen and (max-width: 768px){
+    width: 100px;
+    height: 100px;
+   
+ }
+
  
 `;
-
 
 const smoke1 = keyframes`
 0% {
@@ -220,11 +248,11 @@ const smoke1 = keyframes`
   opacity:1
 }
 
-`
+`;
 
  const Smoke = styled(motion.img)`
   width: 220px;
-  height: 220px;
+  height: 320px;
   filter:blur(7px);
   transform-origin:50% 50%;
   animation: ${smoke1} 4s linear infinite;
@@ -234,6 +262,12 @@ const smoke1 = keyframes`
        height: 200px;
       
     }
+
+    @media screen and (max-width: 900px){
+      width: 100px;
+      height: 250px;
+     
+   }
 
     @media screen and (max-width: 375px){
       width: 150px;
@@ -249,222 +283,280 @@ const Cadre = styled.div`
   border-radius:30px;
   margin:10px 10px;
   justify-content:space-between;
+  background:#7700FF;
   box-shadow:0 0 7px rgba(255, 255, 255, 0.89),
   0 0 1px #fff,
   0 0 2px #fff,
-  0 0 4px rgb(0, 195, 255),
-  0 0 8px rgb(0, 195, 255),
-  0 0 9px rgb(0, 195, 255),
-  0 0 10px rgb(0, 195, 255),
-  0 0 15px rgb(0, 195, 255);
+  0 0 4px #4400FF,
+    0 0 8px #4400FF,
+    0 0 9px #4400FF,
+    0 0 10px #4400FF,
+    0 0 15px #4400FF;
 
   ${Image}:nth-child(0) {
     width:200px;
     height:350px
   }
+
+  @media screen and (max-width: 900px){
+    width:80%;
+
+  }
+
+
+  @media screen and (max-width: 500px){
+   
+    width:90%;
+   
+ }
+
+  @media screen and (max-width: 768px){
+   
+    height: 150px;
+   
+ }
 `;
 
-const H1 = styled(motion.h1)`
-    font-size:2.5em;
-    color:white;
-    text-align:center
+const Paragraph = styled.div`
+
+@media screen and (max-width: 698px){
+   padding-bottom:20px;
+}
+
 `
 
 
 
-function About() {
+
+
+function About({textenter,textleave}) {
+
+  const title = "À PROPOS DE MOI".split("");
+
   return (
     <Content id="about" >
         <Container maxWidth="lg">
           <Box>
              <Grid container spacing={3}>
-                <Grid marginBottom={5} item xs={12} lg={12}>
-                   <H1
-                    viewport={{once:false}}
-                    initial={{opacity:0,x:50}}
-                    whileInView={{opacity:1,x:0}}
-                    transition={{type:"easeIn", duration:0.9,delay:0.5 }}
-                   >
-                    À PROPOS DE MOI
-                  </H1>
+                <Grid marginBottom={5} item xs={12} lg={12}  display="flex" justifyContent="center">
+                  {
+                    title.map((letter,index)=>{
+                      return(
+                        <TextSpan  enter={textenter} leave={textleave}   key={index} >
+                          {letter === " " ? "\u00A0" : letter}
+                        </TextSpan>
+                      )
+                    })
+                  } 
                 </Grid>
-                <Grid container item lg={6}  xs={12}>
+                <Grid container item lg={6} md={6} sm={6} xs={12}>
                   <Grid  container item   lg={12} xs={12} >
                      <Grid item xs={3} >
                      <Span
                           viewport={{once:false}}
-                          initial={{opacity:0,y:0}}
+                          initial={{opacity:0,y:50}}
                           whileInView={{opacity:1,y:0}}
-                          transition={{type:"easeIn", duration:0.9,delay:0.20 }}
+                          transition={{type:"easeIn", duration:0.9,delay:0.15 }}
                       > <i>ME</i> 
                       </Span>
                      </Grid>
                       <Grid item xs={3} > 
                         <Span
-                            viewport={{once:false}}
-                            initial={{opacity:0,y:0}}
-                            whileInView={{opacity:1,y:0}}
-                            transition={{type:"easeIn", duration:0.9,delay:0.40 }}
+                           viewport={{once:false}}
+                           initial={{opacity:0,y:50}}
+                           whileInView={{opacity:1,y:0}}
+                           transition={{type:"easeIn", duration:0.9,delay:0.15 }}
                         > <i>MYSELF</i> 
                         </Span>
                       </Grid>
                       <Grid item xs={3} > 
-                          <Span
-                          viewport={{once:false}}
-                          initial={{opacity:0,y:0}}
-                          whileInView={{opacity:1,y:0}}
-                          transition={{type:"easeIn", duration:0.9,delay:0.60 }}
+                       <Span
+                         viewport={{once:false}}
+                         initial={{opacity:0,y:50}}
+                         whileInView={{opacity:1,y:0}}
+                         transition={{type:"easeIn", duration:0.9,delay:0.15 }}
                           > <i>&</i> 
-                          </Span>
+                      </Span>
                       </Grid>
                       <Grid item xs={3} >
-                          <Span
-                          viewport={{once:false}}
-                          initial={{opacity:0,y:0}}
-                          whileInView={{opacity:1,y:0}}
-                          transition={{type:"easeIn", duration:0.9,delay:0.80 }}
+                      <Span
+                         viewport={{once:false}}
+                         initial={{opacity:0,y:50}}
+                         whileInView={{opacity:1,y:0}}
+                         transition={{type:"easeIn", duration:0.9,delay:0.15 }}
                           > <i>I</i> 
-                          </Span>
-                         </Grid>
+                       </Span>
+                  </Grid>
                     
                     
                     
                     
                   </Grid>
+
                   <Grid item   lg={12} xs={12} ></Grid>
-                     <Typography fontSize={15} variant="body1" align='justify' component="p" color="white">
+                  <Paragraph>
+                     <Typography 
+                      onMouseEnter={textenter} 
+                      onMouseLeave={textleave}  
+                      fontSize={15} 
+                      variant="body1" 
+                      align='justify' 
+                      component="p" 
+                      color="white"
+                      >
                           Je suis un developpeur React Fullstak. Je vis à Dakar au Sénégal.
                           J'ai une passion pour le developpement web et mobile multi plateforme.
                      </Typography>
-                     <Typography fontSize={15} variant="body1"  align='justify' component="p" color="white">
+                     </Paragraph>
+                     <Paragraph>
+                     <Typography 
+                        onMouseEnter={textenter} 
+                        onMouseLeave={textleave}  
+                        fontSize={15} 
+                        variant="div"  
+                        align='justify' 
+                        component="p" 
+                        color="white"
+                     >
                             Etant quelqu'un d'organisé, J'aime commencer par l'étude spécifiques des besoins à
                             l'étude architecturale d'un projet avant de le mettre en oeuvre. Résolveur de problèmes,
                             je suis fan de méditation et de reflexion. Je m'interesse beaucoup à comprendre la psychologie 
                             humaine à travers la lecture et mes propres expériences personnelles mais aussi de mon entourage.
                       </Typography>
-                      <Typography fontSize={15}  variant="body1"  align='justify' component="p" color="white">
+                      </Paragraph>
+                      <Paragraph>
+                      <Typography  
+                        onMouseEnter={textenter} 
+                        onMouseLeave={textleave}  
+                        fontSize={15} 
+                        variant="div"  
+                        align='justify' 
+                        component="p" 
+                        color="white"
+                      >
                             Je suis motivé et intéressé à travailler sur tous projets innovants avec des personnes respectueuses et positives
                             afin de m'améliorer.
                       </Typography>
+                      </Paragraph>
                 </Grid>
-                <Grid item  lg={6}  xs={12}  container >
+                <Grid item  lg={6} md={6} xs={12} sm={6}  container >
                        <Grid container item lg={12}  xs={12}>
-                       <Grid item  lg={2} xs={4} md={2}>
+                       <Grid item  lg={2} xs={3} md={2} sm={3} >
                        <Span
-                          viewport={{once:false}}
-                          initial={{opacity:0,y:0}}
-                          whileInView={{opacity:1,y:0}}
-                          transition={{type:"easeIn", duration:0.9,delay:0.20 }}
+                         viewport={{once:false}}
+                         initial={{opacity:0,y:0}}
+                         whileInView={{opacity:1,y:0}}
+                         transition={{type:"easeIn", duration:0.9,delay:0.1 }}
                         > <i>HTML</i> 
                         </Span>
                        </Grid>
                        
-                        <Grid item  lg={2} xs={4} md={2}>
+                        <Grid item  lg={2} xs={3} md={2} sm={3} >
 
                         <Span
-                            viewport={{once:false}}
-                            initial={{opacity:0,y:0}}
-                            whileInView={{opacity:1,y:0}}
-                            transition={{type:"easeIn", duration:0.9,delay:0.40 }}
+                          viewport={{once:false}}
+                          initial={{opacity:0,y:0}}
+                          whileInView={{opacity:1,y:0}}
+                          transition={{type:"easeIn", duration:0.9,delay:0.10 }} 
                         >
                            <i>CSS</i> 
                            </Span>
                         </Grid>
                        
-                           <Grid item  lg={2} xs={4} md={2}>
-                           <Span
-                         viewport={{once:false}}
-                         initial={{opacity:0,y:0}}
-                         whileInView={{opacity:1,y:0}}
-                         transition={{type:"easeIn", duration:0.9,delay:0.60 }}
+                           <Grid item  lg={2} xs={3} md={2} sm={3} >
+                        <Span
+                        viewport={{once:false}}
+                        initial={{opacity:0,y:0}}
+                        whileInView={{opacity:1,y:0}}
+                        transition={{type:"easeIn", duration:0.9,delay:0.15 }}
                         > 
                           <i>PHP</i> 
                         </Span>
                            </Grid>
                        
-                        <Grid item  lg={2} xs={4} md={2}>
+                        <Grid item  lg={2} xs={3} md={2}  sm={3}>
                         <Span
                          viewport={{once:false}}
                          initial={{opacity:0,y:0}}
                          whileInView={{opacity:1,y:0}}
-                         transition={{type:"easeIn", duration:0.9,delay:0.80 }}
+                         transition={{type:"easeIn", duration:0.9,delay:0.25 }}
                         > 
                           <i>JAVA-SCRIPT</i>
                         </Span>
                         </Grid>
                        
-                        <Grid item  lg={2} xs={4} md={2}>
+                        <Grid item  lg={2} xs={3} md={2}  sm={3}>
                         <Span
-                              viewport={{once:false}}
-                              initial={{opacity:0,y:0}}
-                              whileInView={{opacity:1,y:0}}
-                              transition={{type:"easeIn", duration:0.9,delay:1.00 }}
+                           viewport={{once:false}}
+                           initial={{opacity:0,y:0}}
+                           whileInView={{opacity:1,y:0}}
+                           transition={{type:"easeIn", duration:0.9,delay:0.30 }}  
                           > 
                           <i>MySQL</i> 
                           </Span>
                         </Grid>
                          
-                          <Grid item  lg={2} xs={4} md={2}>
+                          <Grid item  lg={2} xs={3} md={2}  sm={3}>
                             <Span
-                              viewport={{once:false}}
-                              initial={{opacity:0,y:0}}
-                              whileInView={{opacity:1,y:0}}
-                              transition={{type:"easeIn", duration:0.9,delay:1.20 }}
+                             viewport={{once:false}}
+                             initial={{opacity:0,y:0}}
+                             whileInView={{opacity:1,y:0}}
+                             transition={{type:"easeIn", duration:0.9,delay:0.40 }}
                               > 
                               <i>REST API</i> 
                               </Span>
 
                           </Grid>
                          
-                      </Grid>
-                      <Grid container item lg={12}  xs={12}>
-                         <Grid item  lg={2} xs={4} md={2}>
+                     
+                      
+                         <Grid item  lg={2} xs={3} md={2}  sm={3}>
                           <Span
-                                viewport={{once:false}}
-                                initial={{opacity:0,y:0}}
-                                whileInView={{opacity:1,y:0}}
-                                transition={{type:"easeIn", duration:0.9,delay:0.20 }}
+                              viewport={{once:false}}
+                              initial={{opacity:0,y:0}}
+                              whileInView={{opacity:1,y:0}}
+                              transition={{type:"easeIn", duration:0.9,delay:0.50 }} 
                             > <i>MONGO-DB</i> 
                             </Span>
                          </Grid>
                          
-                          <Grid item  lg={2} xs={4} md={2}>
-                              <Span
-                                viewport={{once:false}}
-                                initial={{opacity:0,y:0}}
-                                whileInView={{opacity:1,y:0}}
-                                transition={{type:"easeIn", duration:0.9,delay:0.40 }}
+                          <Grid item  lg={2} xs={3} md={2}  sm={3}>
+                            <Span
+                               viewport={{once:false}}
+                               initial={{opacity:0,y:0}}
+                               whileInView={{opacity:1,y:0}}
+                               transition={{type:"easeIn", duration:0.9,delay:0.60 }}
                               > 
                                 <i>EXPRESS</i> 
                               </Span>
                           </Grid>
-                          <Grid item  lg={2} xs={4} md={2}>
+                          <Grid item  lg={2} xs={3} md={2}  sm={3}>
                             <Span
-                              viewport={{once:false}}
-                              initial={{opacity:0,y:0}}
-                              whileInView={{opacity:1,y:0}}
-                              transition={{type:"easeIn", duration:0.9,delay:0.60 }}
+                             viewport={{once:false}}
+                             initial={{opacity:0,y:0}}
+                             whileInView={{opacity:1,y:0}}
+                             transition={{type:"easeIn", duration:0.9,delay:0.70 }}
                             > <i>REACT JS</i> 
                             </Span>
                            </Grid>
 
-                           <Grid item  lg={2} xs={4} md={2}>
-                              <Span
-                                viewport={{once:false}}
-                                initial={{opacity:0,y:0}}
-                                whileInView={{opacity:1,y:0}}
-                                transition={{type:"easeIn", duration:0.9,delay:0.80 }}
+                           <Grid item  lg={2} xs={3} md={2}  sm={3}>
+                            <Span
+                              viewport={{once:false}}
+                              initial={{opacity:0,y:0}}
+                              whileInView={{opacity:1,y:0}}
+                              transition={{type:"easeIn", duration:0.9,delay:0.80 }}
                               > 
                                 <i>REACT NATIVE</i> 
                               </Span>
                           </Grid>
                          
-                          <Grid item  lg={2} xs={4} md={2}>
-                              <Span
-                               viewport={{once:false}}
-                               initial={{opacity:0,y:0}}
-                               whileInView={{opacity:1,y:0}}
-                               transition={{type:"easeIn", duration:0.9,delay:0.40 }}
+                          <Grid item  lg={2} xs={3} md={2}  sm={3}>
+                            <Span
+                             viewport={{once:false}}
+                             initial={{opacity:0,y:0}}
+                             whileInView={{opacity:1,y:0}}
+                             transition={{type:"easeIn", duration:0.9,delay:0.10 }}
                               > 
                                 <i>NODE JS</i>
                               </Span>
@@ -472,80 +564,80 @@ function About() {
                          
                           
                          
-                          <Grid item  lg={2} xs={4} md={2}>
-                              <Span
-                               viewport={{once:false}}
-                               initial={{opacity:0,y:0}}
-                               whileInView={{opacity:1,y:0}}
-                               transition={{type:"easeIn", duration:0.9,delay:1.00 }}
+                          <Grid item  lg={2} xs={3} md={2}  sm={3}>
+                            <Span
+                              viewport={{once:false}}
+                              initial={{opacity:0,y:0}}
+                              whileInView={{opacity:1,y:0}}
+                              transition={{type:"easeIn", duration:0.9,delay:0.20 }}
                               > 
                                 <i>REDUX</i> 
                               </Span>
                           </Grid>
                          
-                    </Grid>
-                    <Grid container item lg={12}  xs={12}>
-                          <Grid item  lg={2} xs={4} md={2}>
+                    
+                   
+                          <Grid item  lg={2} xs={3} md={2}  sm={3}>
                           <Span
-                              viewport={{once:false}}
-                              initial={{opacity:0,y:0}}
-                              whileInView={{opacity:1,y:0}}
-                              transition={{type:"easeIn", duration:0.9,delay:0.20 }}
+                            viewport={{once:false}}
+                            initial={{opacity:0,y:0}}
+                            whileInView={{opacity:1,y:0}}
+                            transition={{type:"easeIn", duration:0.9,delay:0.30 }}
                           > 
                           <i>MATERIAL UI</i> 
                           </Span>
                           </Grid>
                           
-                          <Grid item  lg={2} xs={4} md={2} >
+                          <Grid item  lg={2} xs={3} md={2}  sm={3} >
                             <Span
-                            viewport={{once:false}}
-                            initial={{opacity:0,y:0}}
-                            whileInView={{opacity:1,y:0}}
-                            transition={{type:"easeIn", duration:0.9,delay:0.40 }}
+                           viewport={{once:false}}
+                           initial={{opacity:0,y:0}}
+                           whileInView={{opacity:1,y:0}}
+                           transition={{type:"easeIn", duration:0.9,delay:0.40 }}
                             > 
                             <i>WORD-PRESS</i>
                            </Span>
                           </Grid>
                          
-                           <Grid item  lg={2} xs={4} md={2} >
+                           <Grid item  lg={2} xs={3} md={2}  sm={3} >
                             <Span
-                                 viewport={{once:false}}
-                                 initial={{opacity:0,y:0}}
-                                 whileInView={{opacity:1,y:0}}
-                                 transition={{type:"easeIn", duration:0.9,delay:0.60 }}
-                                > 
+                              viewport={{once:false}}
+                              initial={{opacity:0,y:0}}
+                              whileInView={{opacity:1,y:0}}
+                              transition={{type:"easeIn", duration:0.9,delay:0.50 }}  
+                            > 
                               <i>GITHUB</i> 
                             </Span>
                            </Grid>
                          
-                          <Grid item  lg={2} xs={4} md={2}>
-                              <Span
-                              viewport={{once:false}}
-                              initial={{opacity:0,y:0}}
-                              whileInView={{opacity:1,y:0}}
-                              transition={{type:"easeIn", duration:0.9,delay:0.80 }}
+                          <Grid item  lg={2} xs={3} md={2}  sm={3}>
+                            <Span
+                             viewport={{once:false}}
+                             initial={{opacity:0,y:0}}
+                             whileInView={{opacity:1,y:0}}
+                             transition={{type:"easeIn", duration:0.9,delay:0.60 }}
                               > 
                               <i>NPM</i>
                               </Span>
                           </Grid>
                         
-                           <Grid item  lg={2} xs={4} md={2}>
+                           <Grid item  lg={2} xs={3} md={2}  sm={3}>
                             <Span
-                                 viewport={{once:false}}
-                                 initial={{opacity:0,y:0}}
-                                 whileInView={{opacity:1,y:0}}
-                                 transition={{type:"easeIn", duration:0.9,delay:1.00 }}
-                                > 
+                               viewport={{once:false}}
+                               initial={{opacity:0,y:0}}
+                               whileInView={{opacity:1,y:0}}
+                               transition={{type:"easeIn", duration:0.9,delay:0.70 }}
+                              > 
                               <i>BOOT-STRAP</i> 
                             </Span>
                            </Grid>
-                           <Grid item  lg={2} xs={4} md={2}>
+                           <Grid item  lg={2} xs={3} md={2}  sm={3}>
                             <Span
-                                 viewport={{once:false}}
-                                 initial={{opacity:0,y:0}}
-                                 whileInView={{opacity:1,y:0}}
-                                 transition={{type:"easeIn", duration:0.9,delay:1.00 }}
-                                > 
+                               viewport={{once:false}}
+                               initial={{opacity:0,y:0}}
+                               whileInView={{opacity:1,y:0}}
+                               transition={{type:"easeIn", duration:0.9,delay:0.80 }} 
+                               > 
                               <i>{'>_'} </i> 
                             </Span>
                            </Grid>
@@ -559,8 +651,8 @@ function About() {
                                   <Image
                                     src={ImgCoffee}
                                     viewport={{once:false}}
-                                    initial={{opacity:0,x:-10}}
-                                    whileInView={{opacity:1,x:0}}
+                                    initial={{opacity:0,y:50}}
+                                    whileInView={{opacity:1,y:0}}
                                     transition={{type:"easeIn", duration:0.5,delay:0.15 }}
                                   />
                             </Cup>
